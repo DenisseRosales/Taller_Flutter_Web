@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Listas en HTML</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome para íconos (opcional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variables de colores pastel */
+        :root {
+            --color-morado-pastel: #b19cd9;
+            --color-rosa-pastel: #ffb6c1;
+            --color-melon-pastel: #ffcccb;
+            --color-verde-agua-pastel: #98fb98;
+            --color-fondo: #fdfdfd;
+            --color-texto: #333333;
+            --color-blanco: #ffffff;
+            --color-sombra: rgba(0, 0, 0, 0.1);
+        }
+
+        /* Aplicación de la tipografía */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--color-verde-agua-pastel), var(--color-melon-pastel));
+            margin: 0;
+            padding: 0;
+            color: var(--color-texto);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Cabecera */
+        header {
+            background-color: var(--color-morado-pastel);
+            color: var(--color-blanco);
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px var(--color-sombra);
+        }
+
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        /* Contenedor Principal */
+        main {
+            flex: 1;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .section-container {
+            background-color: var(--color-blanco);
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px var(--color-sombra);
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1, h2 {
+            color: var(--color-morado-pastel);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 32px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 28px;
+            border-bottom: 3px solid var(--color-melon-pastel);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        ul li, ol li {
+            background-color: var(--color-melon-pastel);
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+            position: relative;
+        }
+
+        ul li:hover, ol li:hover {
+            background-color: var(--color-verde-agua-pastel);
+            transform: translateX(5px);
+        }
+
+        /* Iconos para listas anidadas */
+        ul ul li, ol ol li {
+            background-color: var(--color-rosa-pastel);
+        }
+
+        /* Pie de Página */
+        footer {
+            background-color: var(--color-morado-pastel);
+            color: var(--color-blanco);
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -4px 6px var(--color-sombra);
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--color-rosa-pastel);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--color-blanco);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            main {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            ul li, ol li {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <h1>Ejemplos de Listas en HTML</h1>
+        <p>Aprende a utilizar diferentes tipos de listas en HTML con ejemplos prácticos.</p>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <main>
+        <div class="section-container">
+            <h2>Lista Desordenada (ul)</h2>
+            <ul>
+                <li>Manzana</li>
+                <li>Banana</li>
+                <li>Cereza</li>
+            </ul>
+        </div>
+
+        <div class="section-container">
+            <h2>Lista Ordenada (ol)</h2>
+            <ol>
+                <li>Primero</li>
+                <li>Segundo</li>
+                <li>Tercero</li>
+            </ol>
+        </div>
+
+        <div class="section-container">
+            <h2>Listas Anidadas</h2>
+            <ul>
+                <li>Frutas
+                    <ul>
+                        <li>Manzana</li>
+                        <li>Banana</li>
+                        <li>Cereza</li>
+                    </ul>
+                </li>
+                <li>Verduras
+                    <ul>
+                        <li>Zanahoria</li>
+                        <li>Lechuga</li>
+                        <li>Tomate</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Ejemplos de HTML. Todos los derechos reservados.</p>
+        <p><a href="../index.html">Volver al inicio</a></p>
+    </footer>
+</body>
+</html>

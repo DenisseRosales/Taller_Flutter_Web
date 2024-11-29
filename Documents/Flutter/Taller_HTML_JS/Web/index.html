@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel de Control Creativo</title>
+  <!-- Google Fonts para una tipografía moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Iconos de Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p+z7sBu59s9+1jP4Xq4CnAGkGeCffYp5y8xYf0HvBWjKjHpgJP0kKn2EBjknJwV9x0E/KbUfF7LNLrLpTyFN2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #FDFDFD;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100%;
+      background-color: #FFE4E1;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar .logo h2 {
+      color: #FF6F61;
+      text-align: center;
+    }
+    .sidebar nav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+    }
+    .sidebar nav ul li {
+      margin: 15px 0;
+      color: #FF6F61;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+    .sidebar nav ul li i {
+      margin-right: 10px;
+    }
+    .sidebar .buttons {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .sidebar .buttons .btn {
+      background-color: #FFB6C1;
+      border: none;
+      padding: 10px 15px;
+      margin: 10px 0;
+      color: #fff;
+      border-radius: 20px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .main {
+      margin-left: 240px;
+      padding: 20px;
+    }
+    .main header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .main header h1 {
+      color: #FF6F61;
+    }
+    .main header .user-info {
+      display: flex;
+      align-items: center;
+    }
+    .main header .user-info img {
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .board {
+      display: flex;
+      margin-top: 40px;
+    }
+    .column {
+      background-color: #FFF0F5;
+      padding: 15px;
+      margin-right: 20px;
+      border-radius: 10px;
+      flex: 1;
+    }
+    .column h3 {
+      color: #FF6F61;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .column .note {
+      background-color: #FFFFFF;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .column .note p {
+      margin: 0;
+      color: #333;
+    }
+    .column .note i {
+      color: #FF6F61;
+      float: right;
+      cursor: pointer;
+    }
+    .column .add-note {
+      background-color: #FFB6C1;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 20px;
+      color: #fff;
+      cursor: pointer;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .main {
+        margin-left: 0;
+      }
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      .board {
+        flex-direction: column;
+      }
+      .column {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="logo">
+      <h2>Mi Panel</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><i class="fas fa-folder-open"></i> Borradores</li>
+        <li><i class="fas fa-share-alt"></i> Compartidos Conmigo</li>
+      </ul>
+    </nav>
+    <div class="buttons">
+      <button class="btn"><i class="fas fa-edit"></i> Nuevo Borrador</button>
+      <button class="btn"><i class="fas fa-plus-circle"></i> Nuevo Proyecto</button>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header>
+      <h1>Side Hustle</h1>
+      <div class="user-info">
+        <img src="https://via.placeholder.com/40" alt="Usuario">
+        <span>Juan Pérez</span>
+      </div>
+    </header>
+
+    <div class="board">
+      <div class="column">
+        <h3><i class="fas fa-lightbulb"></i> Ideas</h3>
+        <div class="note">
+          <p><strong>Tablero de Inspiración:</strong> Crea un tablero visual de inspiración para el aspecto y la sensación del producto.</p>
+          <i class="fas fa-link"></i>
+        </div>
+        <button class="add-note"><i class="fas fa-plus"></i> Añadir Nota</button>
+      </div>
+
+      <div class="column">
+        <h3><i class="fas fa-spinner"></i> En Progreso</h3>
+        <div class="note">
+          <p><strong>Diseño de API:</strong> Define endpoints y estructura para una integración sin problemas.</p>
+        </div>
+        <div class="note">
+          <p><strong>Prototipos Hi-Fi:</strong> Finaliza prototipos interactivos para pruebas de usuario.</p>
+        </div>
+        <div class="note">
+          <p><strong>Diseños de Casos Extremos:</strong> Aborda todos los posibles escenarios de usuario en la interfaz.</p>
+        </div>
+        <button class="add-note"><i class="fas fa-plus"></i> Añadir Nota</button>
+      </div>
+
+      <div class="column">
+        <h3><i class="fas fa-check-circle"></i> Hecho</h3>
+        <div class="note">
+          <p><strong>Arquitectura de Información:</strong> Organiza la estructura del contenido para la usabilidad.</p>
+        </div>
+        <div class="note">
+          <p><strong>Convenciones de Código:</strong> Establece estándares de codificación consistentes para el equipo.</p>
+        </div>
+        <div class="note">
+          <p><strong>Wireframes:</strong> Finaliza diseños de baja fidelidad para las principales características.</p>
+        </div>
+        <button class="add-note"><i class="fas fa-plus"></i> Añadir Nota</button>
+      </div>
+
+      <div class="column">
+        <h3><i class="fas fa-bullseye"></i> Objetivos</h3>
+        <div class="note">
+          <p><strong>MVP:</strong> Completa el producto mínimo viable para el lanzamiento inicial.</p>
+        </div>
+        <div class="note">
+          <p><strong>Planes de Lanzamiento:</strong> Desarrolla una estrategia de marketing y despliegue para el producto.</p>
+        </div>
+        <button class="add-note"><i class="fas fa-plus"></i> Añadir Nota</button>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces y Navegación en HTML</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variables de colores pastel */
+        :root {
+            --color-morado-pastel: #b19cd9;
+            --color-rosa-pastel: #ffb6c1;
+            --color-melon-pastel: #ffcccb;
+            --color-verde-agua-pastel: #98fb98;
+            --color-fondo: #fdfdfd;
+            --color-texto: #333333;
+            --color-blanco: #ffffff;
+            --color-sombra: rgba(0, 0, 0, 0.1);
+            --color-hover: #e0e0e0;
+        }
+
+        /* Aplicación de la tipografía */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--color-verde-agua-pastel), var(--color-melon-pastel));
+            margin: 0;
+            padding: 0;
+            color: var(--color-texto);
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            background-color: var(--color-morado-pastel);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px var(--color-sombra);
+        }
+
+        .navbar .logo {
+            color: var(--color-blanco);
+            font-size: 24px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            color: var(--color-blanco);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: var(--color-rosa-pastel);
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: var(--color-blanco);
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px var(--color-sombra);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1, h2 {
+            color: var(--color-morado-pastel);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+        }
+
+        h2 {
+            font-size: 24px;
+            border-bottom: 2px solid var(--color-melon-pastel);
+            padding-bottom: 5px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: var(--color-verde-agua-pastel);
+            font-weight: 500;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        ul li a:hover {
+            color: var(--color-morado-pastel);
+            transform: translateX(5px);
+        }
+
+        /* Botón de retorno a la navegación */
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: var(--color-rosa-pastel);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--color-morado-pastel);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
+
+            .container {
+                padding: 20px 25px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <a href="#" class="logo">Mi Sitio Web</a>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="container">
+        <h1>Ejemplo de Enlaces y Navegación en HTML</h1>
+        <p>En esta página, exploraremos cómo utilizar enlaces y crear una navegación efectiva en HTML. A continuación, encontrarás ejemplos de enlaces a diferentes sitios web y una navegación interna para tu propio sitio.</p>
+        
+        <h2>Enlaces</h2>
+        <p>Enlaces a otras páginas:</p>
+        <ul>
+            <li><a href="https://www.google.com" target="_blank"><i class="fas fa-search"></i> Google</a></li>
+            <li><a href="https://www.bing.com" target="_blank"><i class="fas fa-search"></i> Bing</a></li>
+            <li><a href="https://www.yahoo.com" target="_blank"><i class="fas fa-search"></i> Yahoo</a></li>
+        </ul>
+
+        <h2>Navegación</h2>
+        <p>Navegación interna:</p>
+        <ul>
+            <li><a href="multimedia.html"><i class="fas fa-photo-video"></i> Multimedia</a></li>
+            <li><a href="listas.html"><i class="fas fa-list"></i> Listas</a></li>
+        </ul>
+    </div>
+</body>
+</html>

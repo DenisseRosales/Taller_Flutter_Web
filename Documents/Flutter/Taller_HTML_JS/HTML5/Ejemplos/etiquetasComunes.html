@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descripción de etiquetas comunes en HTML">
+    <title>Etiquetas Comunes en HTML</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome para íconos (opcional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variables de colores pastel */
+        :root {
+            --color-morado-pastel: #b19cd9;
+            --color-rosa-pastel: #ffb6c1;
+            --color-melon-pastel: #ffcccb;
+            --color-verde-agua-pastel: #98fb98;
+            --color-fondo: #fdfdfd;
+            --color-texto: #333333;
+            --color-blanco: #ffffff;
+            --color-sombra: rgba(0, 0, 0, 0.1);
+        }
+
+        /* Aplicación de la tipografía */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--color-verde-agua-pastel), var(--color-melon-pastel));
+            margin: 0;
+            padding: 0;
+            color: var(--color-texto);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Cabecera */
+        header {
+            background-color: var(--color-morado-pastel);
+            color: var(--color-blanco);
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px var(--color-sombra);
+        }
+
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        /* Contenedor Principal */
+        main {
+            flex: 1;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .section-container {
+            background-color: var(--color-blanco);
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px var(--color-sombra);
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1, h2 {
+            color: var(--color-morado-pastel);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 32px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 28px;
+            border-bottom: 3px solid var(--color-melon-pastel);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color: var(--color-melon-pastel);
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        ul li:hover {
+            background-color: var(--color-verde-agua-pastel);
+            transform: translateX(5px);
+        }
+
+        ul li::before {
+            content: "🔹";
+            margin-right: 10px;
+        }
+
+        /* Pie de Página */
+        footer {
+            background-color: var(--color-morado-pastel);
+            color: var(--color-blanco);
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -4px 6px var(--color-sombra);
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--color-rosa-pastel);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--color-blanco);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            main {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            ul li {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <h1>Etiquetas Comunes en HTML</h1>
+        <p>Aprende las etiquetas más utilizadas en HTML para estructurar tus páginas web.</p>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <main>
+        <div class="section-container">
+            <h2>Lista de Etiquetas Comunes</h2>
+            <p>Las etiquetas comunes en HTML son las siguientes:</p>
+            <ul>
+                <li><strong>&lt;html&gt;</strong>: Define el documento como HTML.</li>
+                <li><strong>&lt;head&gt;</strong>: Contiene metadatos y enlaces a estilos.</li>
+                <li><strong>&lt;title&gt;</strong>: Establece el título de la página.</li>
+                <li><strong>&lt;body&gt;</strong>: Contiene el contenido visible de la página.</li>
+                <li><strong>&lt;h1&gt;</strong>: Define el encabezado principal.</li>
+                <li><strong>&lt;p&gt;</strong>: Define un párrafo.</li>
+                <li><strong>&lt;ul&gt;</strong>: Define una lista sin orden.</li>
+                <li><strong>&lt;li&gt;</strong>: Define un ítem de lista.</li>
+                <li><strong>&lt;footer&gt;</strong>: Define el pie de página.</li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Ejemplos de HTML. Todos los derechos reservados.</p>
+        <p><a href="../index.html">Volver al inicio</a></p>
+    </footer>
+</body>
+</html>

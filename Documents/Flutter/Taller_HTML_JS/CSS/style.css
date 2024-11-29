@@ -1,0 +1,168 @@
+/* Importación de la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --color-background: #fff8f0;
+  --color-header: #ffe4e1;
+  --color-footer: #ffe4e1;
+  --color-text: #333333;
+  --color-primary: #bde0fe;
+  --color-secondary: #a2d2ff;
+  --color-hover: #ffc6ff;
+  --color-accent: #ffb3c6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Estilos del Header */
+header {
+  background-color: var(--color-header);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #d2691e;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #d2691e;
+}
+
+/* Estilos del Main */
+main {
+  flex: 1;
+  padding: 40px 20px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ff6f91;
+}
+
+.intro p {
+  font-size: 1.1em;
+  color: #555555;
+}
+
+/* Estilos de la Galería */
+.gallery .flex-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-item {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-radius: 20px;
+  width: 100%;
+  padding-top: 100%; /* Mantiene la proporción cuadrada */
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, background 0.3s;
+  cursor: pointer;
+}
+
+.flex-item::after {
+  content: attr(data-content);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: #fff;
+  font-weight: 600;
+}
+
+.flex-item:hover {
+  transform: translateY(-10px);
+  background: linear-gradient(135deg, var(--color-hover), var(--color-accent));
+}
+
+/* Estilos del Footer */
+footer {
+  background-color: var(--color-footer);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #555555;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer .social-media {
+  margin-top: 10px;
+}
+
+footer .social-media a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: transform 0.3s;
+}
+
+footer .social-media a:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .intro h1 {
+    font-size: 2em;
+  }
+
+  .flex-item::after {
+    font-size: 1.5em;
+  }
+}
+

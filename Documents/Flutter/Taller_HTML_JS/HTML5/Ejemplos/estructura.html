@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplo de un documento HTML con navegación para diferentes ejemplos">
+    <title>Ejemplo de HTML Bien Estructurado</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variables de colores pastel */
+        :root {
+            --color-morado-pastel: #b19cd9;
+            --color-rosa-pastel: #ffb6c1;
+            --color-melon-pastel: #ffcccb;
+            --color-verde-agua-pastel: #98fb98;
+            --color-fondo: #fdfdfd;
+            --color-texto: #333333;
+            --color-blanco: #ffffff;
+            --color-sombra: rgba(0, 0, 0, 0.1);
+        }
+
+        /* Aplicación de la tipografía */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--color-verde-agua-pastel), var(--color-melon-pastel));
+            margin: 0;
+            padding: 0;
+            color: var(--color-texto);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Cabecera */
+        header {
+            background-color: var(--color-morado-pastel);
+            color: var(--color-blanco);
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px var(--color-sombra);
+        }
+
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        /* Barra de Navegación */
+        nav {
+            background-color: var(--color-blanco);
+            box-shadow: 0 4px 6px var(--color-sombra);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--color-morado-pastel);
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s, transform 0.3s;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--color-rosa-pastel);
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        nav ul li a:hover {
+            color: var(--color-rosa-pastel);
+            transform: translateY(-2px);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Contenedor Principal */
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .section-container {
+            background-color: var(--color-blanco);
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px var(--color-sombra);
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: var(--color-morado-pastel);
+            margin-bottom: 15px;
+            font-size: 28px;
+            font-weight: 600;
+            border-bottom: 3px solid var(--color-melon-pastel);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: var(--color-verde-agua-pastel);
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s, transform 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li a i {
+            margin-right: 8px;
+            color: var(--color-morado-pastel);
+            transition: transform 0.3s;
+        }
+
+        ul li a:hover {
+            color: var(--color-morado-pastel);
+            transform: translateX(5px);
+        }
+
+        ul li a:hover i {
+            transform: rotate(20deg);
+        }
+
+        /* Pie de Página */
+        footer {
+            background-color: var(--color-morado-pastel);
+            color: var(--color-blanco);
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -4px 6px var(--color-sombra);
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--color-rosa-pastel);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--color-blanco);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            ul li a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <h1>Mi Sitio Web</h1>
+        <p>Bienvenido a mi página web de ejemplos HTML5. Aquí encontrarás distintos conceptos explicados con ejemplos prácticos.</p>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <ul>
+            <li><a href="../index.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="estructura.html"><i class="fas fa-code"></i> Estructura Básica</a></li>
+            <li><a href="etiquetasComunes.html"><i class="fas fa-tags"></i> Etiquetas Comunes</a></li>
+            <li><a href="listas.html"><i class="fas fa-list"></i> Listas</a></li>
+            <li><a href="enlacesNavegacion.html"><i class="fas fa-link"></i> Enlaces y Navegación</a></li>
+            <li><a href="multimedia.html"><i class="fas fa-photo-video"></i> Imágenes y Multimedia</a></li>
+            <li><a href="formularios.html"><i class="fas fa-pen-square"></i> Formularios</a></li>
+            <li><a href="metadatos.html"><i class="fas fa-info-circle"></i> MetaDatos</a></li>
+            <li><a href="divs.html"><i class="fas fa-th-large"></i> Div's</a></li>
+            <li><a href="nav.html"><i class="fas fa-navicon"></i> Nav</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección Principal -->
+    <main>
+        <div class="section-container">
+            <section>
+                <h2>Introducción</h2>
+                <p>Selecciona cualquier opción del menú de navegación para explorar ejemplos detallados sobre cada tema. Cada sección está diseñada para proporcionarte una comprensión clara y práctica de los conceptos fundamentales de HTML5.</p>
+            </section>
+        </div>
+
+        <!-- Artículos -->
+        <div class="section-container">
+            <article>
+                <h2>HTML en la Web</h2>
+                <p>HTML es el lenguaje de marcado que define la estructura de las páginas web. Es esencial para cualquier desarrollador que quiera crear sitios accesibles y bien estructurados.</p>
+                <p>Explora más sobre este tema en la sección <a href="estructura.html"><i class="fas fa-code"></i> Estructura Básica</a>.</p>
+            </article>
+        </div>
+
+        <div class="section-container">
+            <article>
+                <h2>Formularios Interactivos</h2>
+                <p>Los formularios son herramientas esenciales en las páginas web para interactuar con los usuarios. Se utilizan para recopilar datos, registrar usuarios, y más.</p>
+                <p>Conoce cómo implementarlos en la sección <a href="formularios.html"><i class="fas fa-pen-square"></i> Formularios</a>.</p>
+            </article>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Ejemplos de HTML5. Todos los derechos reservados.</p>
+        <p><a href="../index.html"><i class="fas fa-arrow-left"></i> Volver al inicio</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Este es un ejemplo de metadatos en HTML5">
+    <meta name="keywords" content="HTML5, metadatos, ejemplo">
+    <meta name="author" content="Tu Nombre">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="es">
+    
+    <title>Ejemplo de Metadatos</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Variables de colores pastel */
+        :root {
+            --color-morado-pastel: #b19cd9;
+            --color-rosa-pastel: #ffb6c1;
+            --color-melon-pastel: #ffcccb;
+            --color-verde-agua-pastel: #98fb98;
+            --color-fondo: #fdfdfd;
+            --color-texto: #333333;
+            --color-blanco: #ffffff;
+            --color-sombra: rgba(0, 0, 0, 0.1);
+        }
+
+        /* Aplicación de la tipografía */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--color-verde-agua-pastel), var(--color-melon-pastel));
+            margin: 0;
+            padding: 0;
+            color: var(--color-texto);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Cabecera */
+        header {
+            background-color: var(--color-morado-pastel);
+            color: var(--color-blanco);
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px var(--color-sombra);
+        }
+
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        /* Contenedor Principal */
+        main {
+            flex: 1;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .section-container {
+            background-color: var(--color-blanco);
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px var(--color-sombra);
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1, h2 {
+            color: var(--color-morado-pastel);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 32px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 28px;
+            border-bottom: 3px solid var(--color-melon-pastel);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        ul li, ol li {
+            background-color: var(--color-melon-pastel);
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+            position: relative;
+        }
+
+        ul li:hover, ol li:hover {
+            background-color: var(--color-verde-agua-pastel);
+            transform: translateX(5px);
+        }
+
+        /* Iconos para listas anidadas */
+        ul ul li, ol ol li {
+            background-color: var(--color-rosa-pastel);
+        }
+
+        /* Pie de Página */
+        footer {
+            background-color: var(--color-morado-pastel);
+            color: var(--color-blanco);
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -4px 6px var(--color-sombra);
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--color-rosa-pastel);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--color-blanco);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            main {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            ul li, ol li {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <h1>Ejemplos de Metadatos en HTML5</h1>
+        <p>Aprende a utilizar metadatos en tus documentos HTML para mejorar su funcionalidad y SEO.</p>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <main>
+        <div class="section-container">
+            <h2>¿Qué son los Metadatos?</h2>
+            <p>Los metadatos son datos que proporcionan información sobre otros datos. En el contexto de HTML, los metadatos se utilizan para describir la información del documento, como su autor, descripción, palabras clave, y más.</p>
+        </div>
+
+        <div class="section-container">
+            <h2>Tipos Comunes de Metadatos en HTML5</h2>
+            <ul>
+                <li><strong>&lt;meta charset="UTF-8"&gt;</strong>: Define la codificación de caracteres del documento.</li>
+                <li><strong>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</strong>: Controla cómo se muestra la página en dispositivos móviles.</li>
+                <li><strong>&lt;meta name="description" content="..."&gt;</strong>: Proporciona una descripción breve del contenido de la página.</li>
+                <li><strong>&lt;meta name="keywords" content="..."&gt;</strong>: Lista de palabras clave relevantes para la página.</li>
+                <li><strong>&lt;meta name="author" content="..."&gt;</strong>: Especifica el autor del documento.</li>
+                <li><strong>&lt;meta name="robots" content="index, follow"&gt;</strong>: Indica a los motores de búsqueda si deben indexar la página y seguir los enlaces.</li>
+                <li><strong>&lt;meta name="language" content="es"&gt;</strong>: Especifica el idioma del documento.</li>
+            </ul>
+        </div>
+
+        <div class="section-container">
+            <h2>Importancia de los Metadatos</h2>
+            <p>Los metadatos son esenciales para:</p>
+            <ol>
+                <li>Mejorar el SEO (Optimización para Motores de Búsqueda).</li>
+                <li>Facilitar la indexación de la página por parte de los motores de búsqueda.</li>
+                <li>Proporcionar información adicional a los navegadores y dispositivos.</li>
+                <li>Mejorar la accesibilidad y la experiencia del usuario.</li>
+            </ol>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Ejemplos de HTML5. Todos los derechos reservados.</p>
+        <p><a href="../index.html">Volver al inicio</a></p>
+    </footer>
+</body>
+</html>
